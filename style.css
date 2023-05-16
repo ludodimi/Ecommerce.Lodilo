@@ -9,27 +9,34 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 28pt;
+  font-size: 25pt;
   z-index: 1;
-  height: 100px;
   color: white;
 }
 .centered2 {
   position: absolute;
-  top: 60%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.centered3{
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28pt;
+  z-index: 1;
+  color: white;
 }
 
 /* Top right text */
 .top-right {
   position: absolute;
   top: 108px;
-  right: auto;
-  left: 500px;
   font-size: 28pt;
 }
 #login {
   font-size: 12pt;
   bottom: 150px;
+  min-width: 50px;
 }
