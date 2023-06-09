@@ -9,8 +9,9 @@ footer: https://github.com/matteobaccan/CorsoWebDesign
 ---
 
 # Corso WebDesign
+Ludovica Dimitri
 
-Impariamo insieme come utilizzare HTML, CSS e Javascript
+Progetto e-commerce "Lodilo"
 
 
 
