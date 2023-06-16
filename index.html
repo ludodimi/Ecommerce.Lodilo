@@ -13,6 +13,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link href="style.css" rel="stylesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/opensans-font.css">
+<link rel="stylesheet" type="text/css" href="fonts/line-awesome/css/line-awesome.min.css">
   <title>Il mio sito Ecommerce</title>
 </head>
 
@@ -185,87 +187,46 @@
     <div class="centered" style="text-shadow: 2px 2px 4px black;">Discover Your Power</div>
     <div class="centered2"><a href="#" class="btn btn-outline-light" style="width: 165px; text-lign: center; font-size: 10pt; border-radius: 50px;">Acquista ora</a></div>
   </div>
-  <div class="container" style="margin-bottom: 20px;">
-  <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 mx-auto container" id="isc">
-    <div class="centered3" style="margin-top: 60px;"> Iscriviti!</div>
-    <div class="container-fluid" style="margin-top: 60px;">
-    <form class="row g-3 needs-validation centered form form-group-sm" novalidate id="login">
-      <div class="col-4">
-        <label for="validationCustom01" class="form-label">Nome</label>
-        <input type="text" class="form-control" id="validationCustom01" value="" required>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <div class="col-4 col-sm">
-        <label for="validationCustom02" class="form-label">Cognome</label>
-        <input type="text" class="form-control" id="validationCustom02" value="" required>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <div class="col-4 col-sm">
-        <label for="validationCustomUsername" class="form-label">Username</label>
-        <div class="input-group has-validation">
-          <span class="input-group-text" id="inputGroupPrepend">@</span>
-          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-          <div class="invalid-feedback">
-            Please choose a username.
-          </div>
-        </div>
-      </div>
-      <div class="col-4 col-sm">
-        <label for="validationCustom03" class="form-label">City</label>
-        <input type="text" class="form-control" id="validationCustom03" required>
-        <div class="invalid-feedback">
-          Please provide a valid city.
-        </div>
-      </div>
-      <div class="col-4 col-sm">
-        <label for="validationCustom04" class="form-label">State</label>
-        <select class="form-select" id="validationCustom04" required>
-          <option selected disabled value="">Choose...</option>
-          <option>Italy</option>
-          <option>French</option>
-          <option>Deutch</option>
-          <option>Spain</option>
-        </select>
-        <div class="invalid-feedback">
-          Please select a valid state.
-        </div>
-      </div>
-      <div class="col-4 col-sm">
-        <label for="validationCustom05" class="form-label">Cap</label>
-        <input type="text" class="form-control" id="validationCustom05" required>
-        <div class="invalid-feedback">
-          Please provide a valid zip.
-        </div>
-      </div>
-      <div class="col-6 col-sm mx-auto">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-          <label class="form-check-label" for="invalidCheck">
-            Agree to terms and conditions
-          </label>
-          <div class="invalid-feedback">
-            You must agree before submitting.
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm">
-        <button class="btn btn-outline-light" type="submit" style="border-radius: 50px;">Submit form</button>
-      </div>
+  <div class="page-content mt-3">
+    <div class="form-v7-content">
+    <div class="form-left">
+    <img src="https://www.sustainablebb.com/wp-content/uploads/2022/08/SBB-Foto-Wordpress-1024x819.jpg" style="width: 650px;" alt="form">
+    <p class="text-1">Sign Up</p>
+    <p class="text-2">Privaci policy & Term of service</p>
+    </div>
+    <form class="form-detail" action="#" method="post" id="myform">
+    <div class="form-row">
+    <label for="username">USERNAME</label>
+    <input type="text" name="username" id="username" class="input-text">
+    </div>
+    <div class="form-row">
+    <label for="your_email">E-MAIL</label>
+    <input type="text" name="your_email" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+    </div>
+    <div class="form-row">
+    <label for="password">PASSWORD</label>
+    <input type="password" name="password" id="password" class="input-text" required>
+    </div>
+    <div class="form-row">
+    <label for="comfirm_password">CONFIRM PASSWORD</label>
+    <input type="password" name="comfirm_password" id="comfirm_password" class="input-text" required>
+    </div>
+    <div class="form-row-last">
+    <input type="submit" name="register" class="register" value="Register">
+    <p>Or<a href="#">Sign in</a></p>
+    </div>
     </form>
-  </div>
-  </div>
-</div>
+    </div>
+    </div>
   <footer class="bg-dark text-light py-3 mt-5" id="foot">
     <div class="container text-center">
       <a class="navbar-brand " href="#" style="font-family: 'Urbanist', sans-serif; font-size: 22pt; color: white; ">Lodilo</a>
       <p>&copy; 2023 Il mio sito - Tutti i diritti riservati</p>
     </div>
-  </footer>
+      </footer>
+    <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon="{&quot;rayId&quot;:&quot;7d83b30f990dba8f&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2023.4.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
 </body>
 
 </html>
