@@ -15,8 +15,107 @@
   <link href="style.css" rel="stylesheet"/>
   <title>Il mio sito Ecommerce</title>
 </head>
-<body>
-    <body style="background-color: #212529;">
+<style>
+  .page-content {
+  width: 100%;
+  margin: 0 auto;
+  background-image: -moz-linear-gradient( 136deg,rgb(20, 208, 255) 0%,rgb(7, 0, 34) 100%);
+  background-image: -webkit-linear-gradient( 136deg,rgb(20, 208, 255) 0%,rgb(7, 0, 34) 100%);
+  background-image: -ms-linear-gradient( 136deg,rgb(20, 208, 255) 0%,rgb(7, 0, 34) 100%);
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff; }
+
+a {
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease; }
+  a, a:hover {
+    text-decoration: none !important; }
+
+.text-black {
+  color: #ffffff;
+margin-left: 150px;
+text-align: center; }
+
+.content {
+  padding: 7rem 0; }
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: 700; }
+
+h3 {
+  font-size: 2rem;
+  font-weight: 700; }
+
+.fa-solid fa-phone, .fa-solid fa-globe, .fa-solid fa-map-pin{
+  margin-right: 18px;
+}
+
+.form-control {
+  border: none;
+  border: 1px solid #070707;
+  border-radius: 0; }
+  .form-control:active, .form-control:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #fffdfd; }
+
+.col-form-label {
+  color: #ffffff; }
+
+
+
+.btn:active, .btn:focus {
+  outline: none;
+  -webkit-box-shadow: 1px;
+  box-shadow: none; }
+
+label.error {
+  font-size: 12px;
+  color: red; }
+
+#message {
+  resize: vertical; }
+
+#form-message-warning, #form-message-success {
+  display: none; }
+
+#form-message-warning {
+  color: #B90B0B; }
+
+#form-message-success {
+  color: #55A44E;
+  font-size: 18px;
+  font-weight: bold; }
+
+.submitting {
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+  display: none;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000; }
+</style>
+
+<body style="background-color: #212529;">
         <p style=" background-color:#0dcaf0 ; text-align: center; font-family: Urbanist; font-size: 10pt;"><b>Free shipping for all orders over 50€</b></p>
         <nav class="navbar navbar-expand-lg navbar-dark my-auto" style="background-color: #212529;">
           <div class="container-fluid">
@@ -27,7 +126,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mx-auto mb-1" style="text-align: center;">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Chi siamo</a>
@@ -99,22 +198,23 @@
             </div>
           </div>
         </nav>
+        <div class="page-content mt-3">
     <div class="content">
     <div class="container"  style="color:white;">
     <div class="row">
     <div class="col-md-5 mt-5 mr-auto">
-    <h2>Contact Us</h2>
+    <h2>Contattaci!</h2>
     <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quaerat autem corrupti asperiores accusantium et fuga! Facere excepturi, quo eos, nobis doloremque dolor labore expedita illum iusto, aut repellat fuga!</p>
-    <ul class="list-unstyled pl-md-5 mb-5">
-    <li class="d-flex text-black mb-2">
-    <span class="mr-3 center"><span class="icon-map"></span></span> 34 Street Name, City Name Here, <br> United States
+    <ul class="list-unstyled">
+    <li class="d-flex text-black mb-2 center">
+      <span class="me-3"><span><i class="fa-solid fa-map-pin mr-3"></i></span></span> Via 25 Aprile, Galliate, Italy
     </li>
-    <li class="d-flex text-black mb-2 center"><span class="mr-3"><span class="icon-phone"></span></span> +1 (222) 345 6789</li>
-    <li class="d-flex text-black center"><span class="mr-3"><span class="icon-envelope-o"></span></span> info@mywebsite.com </li>
+    <li class="d-flex text-black mb-2"><span class="me-3"><span><i class="fa-solid fa-phone"></i></span></span> +39 3315403707</li>
+    <li class="d-flex text-black center"><span class="me-3"><span><i class="fa-solid fa-globe"></i></span></span> ecommerceLodilo.com </li>
     </ul>
     </div>
     <div class="col-md-6">
-    <form class="mb-5" method="post" id="contactForm" name="contactForm" novalidate="novalidate">
+    <form class="mt-4" method="post" id="contactForm" name="contactForm" novalidate="novalidate">
     <div class="row">
     <div class="col-md-12 form-group">
     <label for="name" class="col-form-label">Name</label>
@@ -135,7 +235,7 @@
     </div>
     <div class="row">
     <div class="col-md-12">
-    <input type="submit" value="Send Message" class="btn btn-primary rounded-0 py-2 px-4">
+    <input type="submit" value="Send Message" class="btn btn-outline-light rounded-80 py-2 px-4">
     <span class="submitting"></span>
     </div>
     </div>
@@ -146,21 +246,20 @@
     </div>
     </div>
     </div>
-    
+  </div>
     </div>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/main.js"></script>
-    <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon="{&quot;rayId&quot;:&quot;7d83a2e04b750e71&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2023.4.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
-    
-    </div>
+  </div>
     <footer class="bg-dark text-light py-3 mt-5" id="foot">
         <div class="container text-center">
           <a class="navbar-brand " href="#" style="font-family: 'Urbanist', sans-serif; font-size: 22pt; color: white; ">Lodilo</a>
           <p>&copy; 2023 Il mio sito - Tutti i diritti riservati</p>
         </div>
       </footer>
+      <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+    <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon="{&quot;rayId&quot;:&quot;7d83a2e04b750e71&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2023.4.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
 </body>
 </html>
