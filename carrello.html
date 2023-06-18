@@ -27,7 +27,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-1" style="text-align: center;">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Chi siamo</a>
@@ -46,21 +46,50 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Contatti</a>
+            <a class="nav-link active" aria-current="page" href="contatti.html">Contatti</a>
           </li>
         </ul>
         <li class="nav-item navbar navbar-dark dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-solid fa-cart-shopping" style="color: white; font-size: 14pt;">
+          <a class="nav-link dropdown-toggle" href="carrello.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a href="carrello.html"> 
+              <i class="fa-solid fa-cart-shopping" style="color: white; font-size: 14pt; margin-right:10px;">
             </i>
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: max-content;">
+            <img src="https://img.ltwebstatic.com/images3_pi/2022/05/12/1652341930aa2e475133ab3b9877aca8c1c2b73ae1_thumbnail_900x.webp" class="rounded float-start" style="width: 50px; height:65px; margin-left: 5px;"/>
+            <div style="margin-left: 68px;">Completo <br>"Onda"</div>
+            <div style="margin-left: 68px; font-size:smaller">1x€99,99</div>
+              <button class="btn btn-outline-dark btn-sm float-end" style="margin-top: -50px; margin-right: 5px; font-size: 9pt;">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <img src="https://img.ltwebstatic.com/images3_pi/2022/09/27/1664278195d618d757358a1268393192ac7dc004a3_thumbnail_900x.webp" class="rounded float-start" style="width: 50px; height:65px; margin-left: 5px;"/>
+            <div style="margin-left: 68px;">Completo <br>"Mega"</div>
+            <div style="margin-left: 68px; font-size:smaller">1x€79,99</div>
+              <button class="btn btn-outline-dark btn-sm float-end" style="margin-top: -50px; margin-right: 5px; font-size: 9pt;">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+            <li><a class="dropdown-item" style="text-align: end;" href="#">Total:</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" style="text-align: end;" href="#">€99,99</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+              <div class="btn-group ms-1 me-1" role="group" aria-label="First group">
+                <button type="button" class="btn btn-outline-dark">view cart</button>
+              </div>
+              <div class="btn-group me-1" role="group" aria-label="Second group">
+                <button type="button" class="btn btn-outline-dark">check out</button>
+              </div>
           </ul>
         </li>
         <form class="d-flex">
