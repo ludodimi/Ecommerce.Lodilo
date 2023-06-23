@@ -16,81 +16,175 @@
   <title>Il mio sito Ecommerce</title>
 </head>
 <style>
-  #cart-container {
-  overflow-x: auto;
-}
-#cart-container table {
-  border-collapse: collapse;
-  width: 100%;
-  table-layout: fixed;
-  white-space: nowrap;
-}
-#cart-container table thead {
-  font-weight: 700;
-}
-#cart-container table thead td {
-  background: rgb(12, 120, 255);
-  border: none;
-  padding: 6px 0;
-}
-#cart-container table td {
-  border: 1px solid gray;
-  text-align: center;
-}
-#cart-container table td:nth-child(1) {
-  width: 100px;
-}
-#cart-container table td:nth-child(2),
-#cart-container table td:nth-child(3) {
-  width: 200px;
-}
-#cart-container table td:nth-child(4),
-#cart-container table td:nth-child(5),
-#cart-container table td:nth-child(6) {
-  width: 170px;
-}
-#cart-container table tbody img {
-  width: 100px;
-  height: 130px;
-  object-fit: cover;
-}
-#cart-container table tbody i {
-  color: white;
-}
-#card-bottom .coupon > div,
-#card-bottom .total > div {
-  border: 1px solid gray;
-}
-#card-bottom .coupon h7,
-#card-bottom .total h7 {
-  background: rgb(12, 120, 255);
-  border: none;
-  padding: 6px 200px;
-  width: 100%;
-  font-weight: 700;
-}
-#card-bottom .coupon p,
-#card-bottom .coupon input {
-  padding: 0 12px;
-}
-#card-bottom .coupon input {
-  height: 44px;
-  margin: 0 0 20px 12px;
-}
-#card-bottom .total div > div {
-  padding: 0 12px;
-}
-.second-hr {
-  background: gray;
-  width: 100%;
-  height: 1px;
-}
-#card-bottom .total div > button {
-  margin: 0 12px 20px 0;
-  display: flex;
-  justify-content: flex-end;
-}
-
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    font-size: 18px;
+   
+  }
+  body{
+    display: flex;
+    align-item: center;
+    justify-content: center;
+  }
+  .header{
+    height: 80px;
+    width: 70%;
+    background-color: orange;
+    border-radius: 3px;
+    margin: 30px auto;
+    display: flex;
+    align-item: center;
+    justify-content: space-between;
+    padding: 15px;
+  }
+  .header .logo{
+    font-size. 30px;
+    font-weight: bold;
+    color: white;
+  }
+  .cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 3px;
+    background-color: white;
+    width: 80px;
+  }
+  .fa-solid{
+    color: orange;
+  }
+  .cart p{
+    height: 22px;
+    width: 22px;
+    display: flex;
+    background-color: orange;
+    justify-content: center;
+    align-items: center;
+    border-radius: 22px;
+    color: white;
+    margin: auto;
+  }
+  .container{
+    display: flex;
+    width: 70%;
+    margin-bottom: 30px;
+    margin: auto;
+  }
+  #root{
+    width: 60%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  .sidebar{
+    width: 40%;
+    color: black;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-left: 20px;
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+  }
+  .head{
+    background-color: cyan;
+    height: 40px;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+  align-items: center;
+  }
+  .foot{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border-top: 1px solid black;
+  }
+  .box{
+    display: flex;
+    flex-direction: column;
+    align-item: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  .img-box{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-item: center;
+    justify-content: center;
+  }
+  .images{
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .bottom{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-item: center;
+    justify-content: space-between;
+    height: 110px;
+  }
+  h2{
+    font-size: 20px;
+    color: red;
+  }
+  button{
+    width: 100%;
+    position: relative;
+    border: none;
+    border-radius: 3px;
+    background-color: cyan;
+    padding: 7px 15px;
+    cursor: pointer;
+    color: white;
+  }
+  button: hover{
+    color: black;
+  }
+  .cart-item{
+     display: flex;
+    align-item: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid black;
+    border-radius: 3px;
+    margin: 10px 10px;
+  }
+  .row-img{
+     width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid black;
+     display: flex;
+    align-item: center;
+    justify-content: center;
+  }
+  .rowimg{
+    max-width: 43px;
+    max-height: 43px;
+    border-radius: 50%;
+  }
+  .fa-trash: hover{
+    cursor: pointer;
+    color: gray;
+  }
 </style>
 
 <body style="background-color: #212529;">
@@ -179,93 +273,20 @@
 
   <main class="container my-5">
     <h1 class="mb-4" style="color:rgb(255, 255, 255);">Shopping Cart</h1> shop
-    <div id="cart-container" class="container my-5">
-      <table style="width:100%; color:white;">
-        <thead>
-          <tr>
-            <td>Remove</td>
-            <td>Image</td>
-            <td>Product</td>
-            <td>Price</td>
-            <td>Quantity</td>
-            <td>Total</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
-            <td><img src="https://img.ltwebstatic.com/images3_pi/2022/05/12/1652341930aa2e475133ab3b9877aca8c1c2b73ae1_thumbnail_900x.webp" class="rounded" /></td>
-            <td>
-              <h7>Prodotto1</h7>
-            </td>
-            <td>
-              <h7>€79,99</h7>
-            </td>
-            <td><input class="w-25 pl-1" value="1" type="number"></td>
-            <td>
-              <h7>€159,98</h7>
-            </td>
-          </tr>
-          <tr>
-            <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
-            <td><img src="https://img.ltwebstatic.com/images3_pi/2022/05/12/1652341930aa2e475133ab3b9877aca8c1c2b73ae1_thumbnail_900x.webp" class="rounded" /></td>
-            <td>
-              <h7>Prodotto1</h7>
-            </td>
-            <td>
-              <h7>€79,99</h7>
-            </td>
-            <td><input class="w-25 pl-1" value="1" type="number"></td>
-            <td>
-              <h7>€159,98</h7>
-            </td>
-          </tr>
-          <tr>
-            <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
-            <td><img src="https://img.ltwebstatic.com/images3_pi/2022/05/12/1652341930aa2e475133ab3b9877aca8c1c2b73ae1_thumbnail_900x.webp" class="rounded" /></td>
-            <td>
-              <h7>Prodotto1</h7>
-            </td>
-            <td>
-              <h7>€79,99</h7>
-            </td>
-            <td><input class="w-25 pl-1" value="1" type="number"></td>
-            <td>
-              <h7>€159,98</h7>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <p class="logo">LOGO</p>
+      <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
     </div>
-    <div id="card-bottom" class="container">
-      <div class="row">
-        <div class="coupon col-lg-6 md-6 col-12 mb-4" style="color:white;">
-          <div>
-            <h7>Coupon</h7>
-            <p>Enter your coupon if you have one</p>
-            <input type="text" placeholder="Coupon code">
-            <button>Apply Coupon</button>
-          </div>
-        </div>
-        <div class="total col-lg-6 col-md-6 col-12" style="color:white;">
-          <div>
-            <h7>Cart Total</h7>
-            <div class="d-flex justify-content-between">
-              <h8>Subtotal</h8>
-              <p>€215</p>
-            </div>
-            <div class="d-flex justify-content-between">
-              <h8>Shipping</h8>
-              <p>€215</p>
-            </div>
-            <hr class="second-hr">
-            <div class="d-flex justify-content-between">
-              <h8>Total</h8>
-              <p>€215</p>
-            </div>
-            <button class="ms-auto">Proceed to take out</button>
-
-          </div>
+    <div class="container">
+      <div id="root"></div>
+      <div class="sidebar">
+        <div class="head"><p>My cart</p></div>
+        <div id="cartItem">Your cart is empty</div>
+        <div class="foot">
+        <h3>Total</h3>
+        <h2 id="total">€ 0.00</h2>
+      </div>
+    </div>
+      </div>
           <footer class="bg-dark text-light py-3 mt-5">
             <div class="container text-center">
               <a class="navbar-brand " href="#" style="font-family: 'Urbanist', sans-serif; font-size: 22pt; color: white; ">Lodilo</a>
@@ -273,6 +294,81 @@
             </div>
           </footer>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+         <script>
+          const product = [
+    {
+     id: 0,              
+     image: 'https://wallpapercave.com/dwp1x/wp7483437.jpg',
+     title: 'onda',
+     price: 79,
+     id: 1,
+     image: 'https://img.ltwebstatic.com/images3_pi/2023/02/23/167713576779c76bf8d5c01ad6795d63dea888f05a_thumbnail_900x.webp',
+     title: 'verd',
+     price: 129,
+     id: 2,
+     image: 'https://img.ltwebstatic.com/images3_pi/2023/02/23/167713576779c76bf8d5c01ad6795d63dea888f05a_thumbnail_900x.webp',
+     title: 'vops',
+     price: 109,
+    }
+
+  ];
+  
+const categories = [...new Set(product.map((item)=>
+   {return item}))]
+   let i=0;
+   document.getElementById('root').innerHTML= categories.map((item)=>
+   {
+    var {image, title, price} = item;
+    return(
+        `<div class='box'>
+           <div class='img-box'>
+           <img class='images' src=${image}></img>
+           </div>
+           <div class='bottom'>
+           <p>${title}</p>
+           <h2>$ ${price}.00</h2>` +
+          "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
+          `</div>
+          </div>`
+          )
+   }).join('')
+  
+  var cart = [];
+  
+  function addtocart(a){
+    cart.push({...categories[a]});
+    displaycart();
+  }
+  function delElement(a){
+    cart.splice(a, 1);
+    displaycart();
+  }
+  function displaycart(a){
+    let j= 0; total=0;
+     document.getElementById("count").innerHTML=cart.length;
+    if(cart.length==0){
+      document.getElementById('cartItem').innerHTML= "Your cart is empty";
+       document.getElementById("total").innerHTML= "$ "+0+".00";
+    }
+    else{
+      document.getElementById('cartItem').innerHTML= cart.map((items)=>
+   {
+        var {image, title, price} = items;
+        total=total+price;
+        document.getElementById("total").innerHTML="$ "+total+".00";
+        return(
+        `<div class='cart-item'>
+        <div class='row-img'>
+        <img class='rowimg' src=${image}></img>
+        </div>
+        <p style='font-size:12px;'>${title}</p>
+        <h2 style='font-style:15px;'>$ ${price}.00</h2>+"<i class='fa-solid fa-trash' onclick='delElement("+(j++) +")'></i></div>`
+        );
+      }).join('');
+    }
+  }
+                                                            
+         </script>
 </body>
 
 </html>
