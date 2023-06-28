@@ -190,8 +190,16 @@
     color: gray;
   }
   @media screen and (max-width: 576px){
-
-  } 
+    .container{
+      width: 100%;
+    }
+    #root{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .cart-item,.foot{
+      flex-wrap: wrap;
+    }
+  }
 </style>
 
 <body style="background-color: #212529;">
