@@ -279,34 +279,25 @@
   max-height: 525px;
   overflow: hidden;
 }
-
-@media screen and (max-width: 991px) {
-  .form-v7-content {
-      margin:180px 20px;
-      flex-direction: column;
-      -o-flex-direction: column;
-      -ms-flex-direction: column;
-      -moz-flex-direction: column;
-      -webkit-flex-direction: column
-  }
-
-  .form-v7-content .form-left {
+.carousel-caption h5{
+  font-size: 65px;
+  margin-bottom: 20%;
+  font-family: 'Bebas Neue';
+  text-shadow: 3px 3px 6px black;
+  letter-spacing: 6px;
+}
+ .form-v7-content .form-left {
       width: 100%;
       margin-bottom: -5px
   }
 
   .form-v7-content .form-detail {
-      padding: 50px;
-      width: auto
+     
   }
 
   .form-v7-content .form-detail .register {
       margin-bottom: 80px
   }
-}
-
-@media screen and (max-width: 767px) {
-}
 
 @media screen and (max-width: 575px) {
   .form-v7-content .form-detail {
@@ -324,3 +315,22 @@
       margin-bottom: 50px
   }
 }
+@media screen and (max-width: 769px) {
+
+}
+
+@media screen and (max-width: 991px) {
+  .form-v7-content {
+      margin:180px 20px;
+      flex-direction: column;
+      -o-flex-direction: column;
+      -ms-flex-direction: column;
+      -moz-flex-direction: column;
+      -webkit-flex-direction: column
+  }
+
+ 
+}
+  @media screen and (max-width: 1200px){
+    
+  }
