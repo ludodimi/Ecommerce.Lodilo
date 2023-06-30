@@ -1,8 +1,8 @@
 ---
 theme: default
-_class: 
+_class: invert
 paginate: true
-backgroundColor: white
+backgroundColor: black
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 marp: true
 footer: https://github.com/matteobaccan/CorsoWebDesign
