@@ -2,6 +2,7 @@
 theme: default
 _class: invert
 paginate: true
+color: white
 marp: true
 footer: https://github.com/matteobaccan/CorsoWebDesign
 ---
@@ -9,11 +10,12 @@ footer: https://github.com/matteobaccan/CorsoWebDesign
 # Corso WebDesign
 Ludovica Dimitri
 
-Progetto e-commerce "Lodilo" leggins
+Progetto e-commerce "Lodilo" 
+Leggins sportivi e altro
 
 
 
-<!-- _paginate: false -->
+<!-- _paginate: true -->
 <!-- _footer: "" -->
 <!-- style: "
 img[alt~='center'] {
@@ -26,11 +28,10 @@ img[alt~='center'] {
 
 ## Corso di Web Design
 
-Introduzione agli strumenti di sviluppo web
-_Lezione introduttiva del corso: conoscenza, obiettivi, primi argomenti.
-Parleremo di HTML, CSS, Javascript e di tecniche di sviluppo web_
+Presentazione progetto del corso di Web design del terzo anno accademico
+ACME-Novara
 
-matteo@baccan.it – <https://www.baccan.it>
+ludovica.dimitri08@gmail.com – <https://ecommercelodilo.netlify.app/>
 
 ---
 
