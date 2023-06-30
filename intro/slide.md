@@ -2,6 +2,7 @@
 theme: default
 _class: invert
 paginate: true
+background-color: #3D3D3D
 color: white
 marp: true
 footer: https://github.com/matteobaccan/CorsoWebDesign
