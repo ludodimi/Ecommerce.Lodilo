@@ -1,8 +1,8 @@
 ---
 theme: default
-_class: lead
+_class: 
 paginate: true
-backgroundColor: #fff
+backgroundColor: white
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 marp: true
 footer: https://github.com/matteobaccan/CorsoWebDesign
@@ -11,7 +11,7 @@ footer: https://github.com/matteobaccan/CorsoWebDesign
 # Corso WebDesign
 Ludovica Dimitri
 
-Progetto e-commerce "Lodilo"
+Progetto e-commerce "Lodilo" leggins
 
 
 
