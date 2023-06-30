@@ -17,6 +17,77 @@
   <link rel="stylesheet" type="text/css" href="css/opensans-font.css">
 <link rel="stylesheet" type="text/css" href="fonts/line-awesome/css/line-awesome.min.css">
   <title>Il mio sito Ecommerce</title>
+  <script>
+  const product = [
+				{
+				 id: 0,              
+				 image: 'foto-ecom/Vale-7.jpg',
+				 title: 'onda',
+				 price: 79
+				},{
+				 id: 1,
+				 image: 'foto-ecom/prod verd.png',
+				 title: 'verd',
+				 price: 129
+				},{
+				 id: 2,
+				 image: 'https://img.ltwebstatic.com/images3_pi/2023/02/23/167713576779c76bf8d5c01ad6795d63dea888f05a_thumbnail_900x.webp',
+				 title: 'vops',
+				 price: 109,
+				}
+
+			  ];
+			  
+			const categories = [...new Set(product.map((item)=>
+			   {return item}))];
+			  
+			  
+			  var cart = JSON.parse(localStorage.getItem("cart"));
+			  if (cart==null){
+				cart=[];
+			  }
+			  function addtocart(a){
+				cart.push({...categories[a]});
+				localStorage.setItem("cart",JSON.stringify(cart));
+				gotocart();
+			  }
+			  function delElement(a){
+				cart.splice(a, 1);
+				localStorage.setItem("cart",JSON.stringify(cart));
+				displaycart();
+			  }
+			  function gotocart(){
+				document.location="carrello.html";
+			  }
+			  function displaycart(){
+			
+				
+				if(cart.length==0){
+				
+				   document.getElementById('miniCartItem').innerHTML= "Your cart is empty";
+				   document.getElementById("miniTotal").innerHTML= "€ 0";
+				}else{
+						
+						let m= 0; mtotal=0;
+					document.getElementById('miniCartItem').innerHTML= cart.map((items)=>
+					{
+						var {image, title, price} = items;
+						mtotal=mtotal+price;
+						document.getElementById("miniTotal").innerHTML="€ "+mtotal+".00";
+						return(
+						`<div class='minicart-item'><img src="foto-ecom/vale-prodotti.jpg" class="rounded float-start" style="width: 50px; height:65px; margin-left: 5px;"/>
+						<div style="margin-left: 68px; max-width:90px;">${title}</div>
+						<div style="margin-left: 68px; font-size:smaller">€ ${price}.00</div>
+						  <button class="btn btn-outline-dark btn-sm float-end" style="margin-top: -50px; margin-right: 5px; font-size: 9pt;" 
+							`+" onclick='delElement("+(m++) +")' > "+`
+							<i class="fa-solid fa-trash-can"></i>
+						  </button>
+							<hr class="dropdown-divider"></div>`
+						);
+					}).join('');
+				}
+			  }
+  </script>
 </head>
 
 <body style="background-color: #212529;">
@@ -57,23 +128,12 @@
             </i>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: 198px;" >
-            <img src="foto-ecom/vale-prodotti.jpg" class="rounded float-start" style="width: 50px; height:65px; margin-left: 5px;"/>
-            <div style="margin-left: 68px;">Completo <br>"Elettra"</div>
-            <div style="margin-left: 68px; font-size:smaller">1x€59,99</div>
-              <button class="btn btn-outline-dark btn-sm float-end" style="margin-top: -50px; margin-right: 5px; font-size: 9pt;">
-                <i class="fa-solid fa-trash-can"></i>
-              </button>
               <li>
-                <hr class="dropdown-divider">
+				   <div id="miniCartItem">
+				   </div>
               </li>
-              <img src="foto-ecom/Prodotti rosa.jpg" class="rounded float-start" style="width: 50px; height:65px; margin-left: 5px;"/>
-            <div style="margin-left: 68px;">Completo <br>"Funny"</div>
-            <div style="margin-left: 68px; font-size:smaller">1x€49,99</div>
-              <button class="btn btn-outline-dark btn-sm float-end" style="margin-top: -50px; margin-right: 5px; font-size: 9pt;">
-                <i class="fa-solid fa-trash-can"></i>
-              </button>
             <li><a class="dropdown-item" style="text-align: end;" href="#">Total:</a></li>
-            <li><a class="dropdown-item" style="text-align: end;" href="#">€109,98</a></li>
+            <li><a class="dropdown-item" style="text-align: end;" href="#" id="miniTotal">€ 0</a></li>
             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
               <div class="btn-group ms-1 me-1" role="group" aria-label="First group">
                 <a href="carrello.html"><button type="button" class="btn btn-outline-dark">view cart</button></a>
@@ -139,7 +199,7 @@
           <h5 class="card-title">Completo "Elettra"</h5>
           <p class="card-text">Completo dalla fantasia eclettica</p>
           <p class="card-text"><strong>Prezzo:</strong> €59,99</p>
-          <a href="carrello.html" class="btn btn-outline-light mx-auto" style="width: 165px; text-lign: center; font-size: 10pt; border-radius: 50px;" onclick="aggiungiAlCarrello()">Aggiungi al carrello</a>
+          <a href="#" class="btn btn-outline-light mx-auto" style="width: 165px; text-lign: center; font-size: 10pt; border-radius: 50px;" onclick="addtocart(0)">Aggiungi al carrello</a>
         </div>
       </div>
     </div>
@@ -152,7 +212,7 @@
           <h5 class="card-title">Leggins "Funny"</h5>
           <p class="card-text">Leggins ad alta resistenza</p>
           <p class="card-text"><strong>Prezzo:</strong> €49,99</p>
-          <a href="carrello.html" class="btn btn-outline-light" style="width: 165px; text-lign: center; font-size: 10pt; border-radius: 50px;" onclick="aggiungiAlCarrello()">Aggiungi al carrello</a>
+          <a href="#" class="btn btn-outline-light" style="width: 165px; text-lign: center; font-size: 10pt; border-radius: 50px;" onclick="addtocart(1)">Aggiungi al carrello</a>
         </div>
       </div>
     </div>
@@ -165,7 +225,7 @@
           <h5 class="card-title">Completo "Hope"</h5>
           <p class="card-text">Completo comodo ovunque</p>
           <p class="card-text"><strong>Prezzo:</strong> €79,99</p>
-          <a href="carrello.html" class="btn btn-outline-light" style="width: 165px; text-lign: center; font-size: 10pt; border-radius: 50px;" onclick="aggiungiAlCarrello()">Aggiungi al carrello</a>
+          <a href="#" class="btn btn-outline-light" style="width: 165px; text-lign: center; font-size: 10pt; border-radius: 50px;" onclick="addtocart(2)">Aggiungi al carrello</a>
         </div>
       </div>
     </div>
@@ -244,7 +304,9 @@
     </footer>
     <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon="{&quot;rayId&quot;:&quot;7d83b30f990dba8f&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2023.4.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  
+  <script>
+  displaycart();
+  </script>
 </body>
 
 </html>
