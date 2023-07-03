@@ -41,7 +41,7 @@
     padding: 15px;
   }
   .header .logo{
-    font-size: 30px;
+    font-size. 30px;
     font-weight: bold;
     color: white;
   }
@@ -241,17 +241,9 @@
             </i>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: 198px;" >
-<<<<<<< HEAD
 		       <li>
 				   <div id="miniCartItem">
 				   </div>
-=======
-            
-              <li>
-                <div id="miniCartItem">
-                  Your cart is empty
-              </div>
->>>>>>> d59776b (ok)
               </li>
              
             <li><a class="dropdown-item" style="text-align: end;" href="#">Total:</a></li>
@@ -317,7 +309,6 @@
 				 price: 109,
 				}
 
-<<<<<<< HEAD
 			  ];
 			  
 			const categories = [...new Set(product.map((item)=>
@@ -383,71 +374,6 @@
 			  }
 			displaycart();
 			</script>
-=======
-  ];
-  
-const categories = [...new Set(product.map((item)=>
-   {return item}))]
-  
-   var cart = JSON.parse(localStorage.getItem("cart"));
-    if(cart==null){
-      cart=[];
-    }
-    function addtocart(a){
-    cart.push({...categories[a]});
-    localStorage.setItem("cart",JSON.stringify(cart));
-    displaycart();
-      }
-  function delElement(a){
-    cart.splice(a, 1);
-    localStorage.setItem("cart",JSON.stringify(cart));
-    displaycart();
-  }
-  function displaycart(){
-    let j= 0; total=0;
-     document.getElementById("count").innerHTML=cart.length;
-    if(cart.length==0){
-      document.getElementById('cartItem').innerHTML= "Your cart is empty";
-      document.getElementById('miniCartItem').innerHTML= "Your cart is empty";
-       document.getElementById("total").innerHTML= "€ 0";
-       document.getElementById("miniTotal").innerHTML= "€ 0";
-    }
-    else{
-      document.getElementById('cartItem').innerHTML= cart.map((items)=>
-   {
-        var {image, title, price} = items;
-        total=total+price;
-        document.getElementById("total").innerHTML="€ "+total+".99";
-        return(
-        `<div class='cart-item'>
-        <div class='row-img'>
-        <img class='rowimg' src='${image}'></img>
-        </div>
-        <p style='font-size:12px;'>${title}</p>
-        <h2 style='font-style:15px;'>€ ${price}.99</h2>`+"<i class='fa-solid fa-trash' onclick='delElement("+(j++) +")'></i>"+`</div>`
-        );
-      }).join('');
-      document.getElementById('miniCartItem').innerHTML= cart.map((items)=>
-   {
-        var {image, title, price} = items;
-        total=total+price;
-        document.getElementById("miniTotal").innerHTML="€ "+total+".99";
-        return(
-        `<div class='minicart-item'><img src='${image}' class="rounded float-start" style="width: 50px; height:65px; margin-left: 5px;"/>
-                <div style="margin-left: 68px; max-width:90px;">${title}</div>
-                <div style="margin-left: 68px; font-size:smaller">€${price}.99</div>
-                <button class='btn btn-outline-dark btn-sm float-end' style='margin-top: -50px; margin-right: 5px; font-size: 9pt;'
-                `+" onclick='delElement("+(j++) +")'>"+`
-                <i class='fa-solid fa-trash-can'></i> </button>
-                <hr class="dropdown-divider"></div>`
-        );
-      }).join('');
-    }
-  }
-  displaycart();
-                                                            
-         </script>
->>>>>>> d59776b (ok)
 </body>
 
 </html>
