@@ -16,76 +16,6 @@
   <link href="style.css" rel="stylesheet"/>
   <link rel="stylesheet" type="text/css" href="css/opensans-font.css">
 <link rel="stylesheet" type="text/css" href="fonts/line-awesome/css/line-awesome.min.css">
-<script>
- 
-      const product = [
-    {
-     id: 0,              
-     image: 'foto-ecom/vale-prodotti.jpg',
-     title: 'Completo "Elettra"',
-     price: 59,
-    },{
-     id: 1,
-     image: 'foto-ecom/Marti-3.jpg',
-     title: 'Completo "Hope"',
-     price: 79,
-    },{
-     id: 2,
-     image: 'foto-ecom/marti prpe.png',
-     title: 'Leggins "Funny"',
-     price: 49,
-    }
-
-  ];
-  const categories = [...new Set(product.map((item)=>
-   {return item}))];
-
-  var cart = JSON.parse(localStorage.getItem("cart"));
-if (cart==null){
-  cart=[];
-}
-  function addtocart(a){
-    cart.push({...categories[a]});
-    localStorage.setItem("cart",JSON.stringify(cart));
-    gotocart();
-  }
-  function delElement(a){
-    cart.splice(a, 1);
-    localStorage.setItem("cart",JSON.stringify(cart));
-    displaycart();
-  }
-  function gotocart(){
-    document.location="carrello.html";
-  }
-  function displaycart(){
-    let j= 0; total=0;
-   
-    if(cart.length==0){
-       document.getElementById('miniCartItem').innerHTML= "Your cart is empty";
-
-       document.getElementById("miniTotal").innerHTML= "€ 0";
-    }
-    else{
-      
-      document.getElementById('miniCartItem').innerHTML= cart.map((items)=>
-   {
-        var {image, title, price} = items;
-        total=total+price;
-        document.getElementById("miniTotal").innerHTML="€ "+total+".99";
-        return(
-        `<div class='minicart-item'><img src='${image}' class="rounded float-start" style="width: 50px; height:65px; margin-left: 5px;"/>
-                <div style="margin-left: 68px; max-width:90px;">${title}</div>
-                <div style="margin-left: 68px; font-size:smaller">€${price}.99</div>
-                <button class='btn btn-outline-dark btn-sm float-end' style='margin-top: -50px; margin-right: 5px; font-size: 9pt;'
-                `+" onclick='delElement("+(j++) +")'>"+`
-                <i class='fa-solid fa-trash-can'></i> </button>
-                <hr class="dropdown-divider"></div>`
-        );
-      }).join('');
-    }
-  }
-  
-  </script>
   <title>Il mio sito Ecommerce</title>
   <script>
   const product = [
@@ -198,21 +128,10 @@ if (cart==null){
             </i>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: 198px;" >
-<<<<<<< HEAD
               <li>
 				   <div id="miniCartItem">
 				   </div>
               </li>
-=======
-            
-            <li>
-              <div id="miniCartItem">
-                Your cart is empty
-            </div>
-            </li>
-           
-              
->>>>>>> d59776b (ok)
             <li><a class="dropdown-item" style="text-align: end;" href="#">Total:</a></li>
             <li><a class="dropdown-item" style="text-align: end;" href="#" id="miniTotal">€ 0</a></li>
             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
@@ -386,11 +305,7 @@ if (cart==null){
     <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon="{&quot;rayId&quot;:&quot;7d83b30f990dba8f&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2023.4.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script>
-<<<<<<< HEAD
   displaycart();
-=======
-    displaycart();
->>>>>>> d59776b (ok)
   </script>
 </body>
 
