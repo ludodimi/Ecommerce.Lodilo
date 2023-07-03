@@ -16,6 +16,77 @@
   <link rel="stylesheet" type="text/css" href="css/opensans-font.css">
 <link rel="stylesheet" type="text/css" href="fonts/line-awesome/css/line-awesome.min.css">
   <title>Il mio sito Ecommerce</title>
+  <script>
+    const product = [
+          {
+           id: 0,              
+           image: 'foto-ecom/vale-prodotti.jpg',
+           title: 'Completo Elettra',
+           price: 59
+          },{
+           id: 1,
+           image: 'foto-ecom/marti prpe.png',
+           title: 'Leggins"Funny"',
+           price: 49
+          },{
+           id: 2,
+           image: 'foto-ecom/Marti-3.jpg',
+           title: 'Completo "Hope"',
+           price: 79,
+          }
+  
+          ];
+          
+        const categories = [...new Set(product.map((item)=>
+           {return item}))];
+          
+          
+          var cart = JSON.parse(localStorage.getItem("cart"));
+          if (cart==null){
+          cart=[];
+          }
+          function addtocart(a){
+          cart.push({...categories[a]});
+          localStorage.setItem("cart",JSON.stringify(cart));
+          gotocart();
+          }
+          function delElement(a){
+          cart.splice(a, 1);
+          localStorage.setItem("cart",JSON.stringify(cart));
+          displaycart();
+          }
+          function gotocart(){
+          document.location="carrello.html";
+          }
+          function displaycart(){
+        
+          
+          if(cart.length==0){
+          
+             document.getElementById('miniCartItem').innerHTML= "Your cart is empty";
+             document.getElementById("miniTotal").innerHTML= "€ 0";
+          }else{
+              
+              let m= 0; mtotal=0;
+            document.getElementById('miniCartItem').innerHTML= cart.map((items)=>
+            {
+              var {image, title, price} = items;
+              mtotal=mtotal+price;
+              document.getElementById("miniTotal").innerHTML="€ "+mtotal+".99";
+              return(
+              `<div class='minicart-item'><img src="foto-ecom/vale-prodotti.jpg" class="rounded float-start" style="width: 50px; height:65px; margin-left: 5px;"/>
+              <div style="margin-left: 68px; max-width:90px;">${title}</div>
+              <div style="margin-left: 68px; font-size:smaller">€ ${price}.99</div>
+                <button class="btn btn-outline-dark btn-sm float-end" style="margin-top: -50px; margin-right: 5px; font-size: 9pt;" 
+                `+" onclick='delElement("+(m++) +")' > "+`
+                <i class="fa-solid fa-trash-can"></i>
+                </button>
+                <hr class="dropdown-divider"></div>`
+              );
+            }).join('');
+          }
+          }
+    </script>
 </head>
 <style>
     .page-content {
@@ -24,23 +95,22 @@
     background-color: -ms-linear-gradient( 136deg,rgb(20, 208, 255) 0%,rgb(7, 0, 34) 100%);
     background-image: url=("image00112.jpg");
     display: flex;
-    display: -webkit-flex;
-    justify-content: center;
-    -o-justify-content: center;
-    -ms-justify-content: center;
-    -moz-justify-content: center;
-    -webkit-justify-content: center;
-    align-items: center;
-    -o-align-items: center;
-    -ms-align-items: center;
-    -moz-align-items: center;
-    -webkit-align-items: center
   }
   h1{
   font-family: "Poppins", sans-serif;
   color: #ffffff;
   font-size: 3.5rem;
-  font-weight: 700; }
+  font-weight: 700; 
+  margin-top: 50px;
+  margin-bottom: -60px;
+}
+  .mb-5{
+   text-align: left;
+  }
+  .form-left {
+      width: 200%;
+      height: auto;
+  }
   
   </style>
 
@@ -65,103 +135,86 @@
               Prodotti
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Leggins</a></li>
-              <li><a class="dropdown-item" href="#">Top</a></li>
+              <li><a class="dropdown-item" href="#to3">Leggins</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Set</a></li>
+              <li><a class="dropdown-item" href="#ap">Altri prodotti</a></li>
             </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="contatti.html">Contatti</a>
           </li>
         </ul>
-        <li class="nav-item navbar navbar-dark dropdown">
+        <li class="nav-item navbar navbar-dark dropdown d-flex justify-content-center">
           <a class="nav-link dropdown-toggle" href="carrello.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <a href="carrello.html"> 
               <i class="fa-solid fa-cart-shopping" style="color: white; font-size: 14pt; margin-right:10px;">
             </i>
           </a>
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: max-content;">
-            <img src="https://img.ltwebstatic.com/images3_pi/2022/05/12/1652341930aa2e475133ab3b9877aca8c1c2b73ae1_thumbnail_900x.webp" class="rounded float-start" style="width: 50px; height:65px; margin-left: 5px;"/>
-            <div style="margin-left: 68px;">Completo <br>"Onda"</div>
-            <div style="margin-left: 68px; font-size:smaller">1x€99,99</div>
-              <button class="btn btn-outline-dark btn-sm float-end" style="margin-top: -50px; margin-right: 5px; font-size: 9pt;">
-                <i class="fa-solid fa-trash-can"></i>
-              </button>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: 198px;" >
               <li>
-                <hr class="dropdown-divider">
-              </li>
-              <img src="https://img.ltwebstatic.com/images3_pi/2022/09/27/1664278195d618d757358a1268393192ac7dc004a3_thumbnail_900x.webp" class="rounded float-start" style="width: 50px; height:65px; margin-left: 5px;"/>
-            <div style="margin-left: 68px;">Completo <br>"Mega"</div>
-            <div style="margin-left: 68px; font-size:smaller">1x€79,99</div>
-              <button class="btn btn-outline-dark btn-sm float-end" style="margin-top: -50px; margin-right: 5px; font-size: 9pt;">
-                <i class="fa-solid fa-trash-can"></i>
-              </button>
-              <li>
-                <hr class="dropdown-divider">
+				   <div id="miniCartItem">
+				   </div>
               </li>
             <li><a class="dropdown-item" style="text-align: end;" href="#">Total:</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" style="text-align: end;" href="#">€99,99</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
+            <li><a class="dropdown-item" style="text-align: end;" href="#" id="miniTotal">€ 0</a></li>
             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
               <div class="btn-group ms-1 me-1" role="group" aria-label="First group">
-                <button type="button" class="btn btn-outline-dark">view cart</button>
+                <a href="carrello.html"><button type="button" class="btn btn-outline-dark">view cart</button></a>
               </div>
               <div class="btn-group me-1" role="group" aria-label="Second group">
-                <button type="button" class="btn btn-outline-dark">check out</button>
+                <a href="carrello.html"><button type="button" class="btn btn-outline-dark">check out</button></a>
               </div>
           </ul>
         </li>
-        <form class="d-flex">
+        <form class="d-flex justify-content-center">
           <input class="form-control me-2" style="border-radius: 20px; width: 135px;" type="search" placeholder="Search..." aria-label="Search">
           <button class="btn btn-outline-light" style="border-radius: 100%;" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
       </div>
     </div>
   </nav>
-  <div class="page-content" style="background-image: url('foto-ecom/Vale-7.jpg');">
+  <div class="page-content">
     <div class="content">
         <div class="container"  style="color:white;">
         <div class="row">
-          <div >
-          </div>
         <div class="col mt-5" style="background-color: -ms-linear-gradient( 136deg,rgb(20, 208, 255) 0%,rgb(7, 0, 34) 100%);">
         <h1>About us</h1>
-        <div class="col-md-6 mt-5 mx-auto">
-        <p class="mb-5" style="text-shadow: 2px 2px 4px black;">Benvenuti su Lodilo.com, il tuo punto di riferimento per leggins sportivi di alta qualità e stile. Siamo appassionati di fitness e moda, e ci impegniamo a fornire prodotti che soddisfino le esigenze di donne attive e moderne come te.
-
-          La nostra missione è offrire una vasta gamma di leggins sportivi che uniscano comfort, funzionalità e design all'avanguardia. Sappiamo quanto sia importante sentirsi a proprio agio durante l'attività fisica, e proprio per questo selezioniamo con cura i materiali dei nostri leggins per garantire traspirabilità, elasticità e supporto muscolare ottimali.
-          
-          Collaboriamo con i migliori produttori e brand nel settore per offrirti leggins che si distinguono per la loro qualità e durata nel tempo. Siamo costantemente aggiornati sulle ultime tendenze e innovazioni nel mondo dello sportswear, così da poterti offrire sempre i modelli più alla moda e funzionali.
-          
-          Da noi troverai leggins adatti a ogni tipo di attività sportiva, che tu sia una appassionata di yoga, una runner incallita o una fanatica del sollevamento pesi. Offriamo una vasta gamma di taglie, stili e colori per permetterti di esprimere la tua personalità e il tuo stile anche durante l'allenamento.
-          
-          La soddisfazione dei nostri clienti è la nostra priorità assoluta. Siamo fieri di offrire un servizio clienti attento e disponibile, pronto a rispondere alle tue domande e ad assisterti in ogni fase del tuo acquisto. Siamo anche consapevoli dell'importanza della sicurezza online, pertanto garantiamo un sistema di pagamento sicuro e una protezione dei dati personale.
-          
-          Non vediamo l'ora di accompagnarti nel tuo percorso di fitness con i nostri leggins sportivi di alta qualità. Sfoglia il nostro sito online, trova il paio di leggins perfetto per te e preparati ad affrontare le tue sfide sportive con stile e comfort. Grazie per aver scelto Lodilo.com, siamo qui per te!
-        </p>
+        <div>
+          <div class="form-v7-content col-md-8">
+          <div class="form-left">
+          <img src="foto-ecom/Vale-3.jpg" class="img-fluid"  alt="form">
+          </div>
+          <div class="col-md-6 mt-4 ">
+            <p class="mb-5 ms-3" style="text-shadow: 2px 2px 4px black; font-family: 'Poppins', sans-serif; width: 118%;">Benvenuti su Lodilo.com, il tuo punto di riferimento per leggins sportivi di alta qualità e stile. Siamo appassionati di fitness e moda, e ci impegniamo a fornire prodotti che soddisfino le esigenze di donne attive e moderne come te.
+    
+              La nostra missione è offrire una vasta gamma di leggins sportivi che uniscano comfort, funzionalità e design all'avanguardia. Sappiamo quanto sia importante sentirsi a proprio agio durante l'attività fisica, e proprio per questo selezioniamo con cura i materiali dei nostri leggins per garantire traspirabilità, elasticità e supporto muscolare ottimali.
+              
+              Collaboriamo con i migliori produttori e brand nel settore per offrirti leggins che si distinguono per la loro qualità e durata nel tempo. Siamo costantemente aggiornati sulle ultime tendenze e innovazioni nel mondo dello sportswear, così da poterti offrire sempre i modelli più alla moda e funzionali.
+              
+              Da noi troverai leggins adatti a ogni tipo di attività sportiva, che tu sia una appassionata di yoga, una runner incallita o una fanatica del sollevamento pesi. Offriamo una vasta gamma di taglie, stili e colori per permetterti di esprimere la tua personalità e il tuo stile anche durante l'allenamento.
+              
+              La soddisfazione dei nostri clienti è la nostra priorità assoluta. Siamo fieri di offrire un servizio clienti attento e disponibile, pronto a rispondere alle tue domande e ad assisterti in ogni fase del tuo acquisto. Siamo anche consapevoli dell'importanza della sicurezza online, pertanto garantiamo un sistema di pagamento sicuro e una protezione dei dati personale.
+              
+              Non vediamo l'ora di accompagnarti nel tuo percorso di fitness con i nostri leggins sportivi di alta qualità. Sfoglia il nostro sito online, trova il paio di leggins perfetto per te e preparati ad affrontare le tue sfide sportive con stile e comfort. Grazie per aver scelto Lodilo.com, siamo qui per te!
+            </p>
+            </div>
+          </div>
+          </div>
+        </div>
+       </div>
+       </div>
     </div>
-        </div>
-        </div>
-        </div>
-        </div>
   </div>
   <footer class="bg-dark text-light py-3 mt-5" id="foot">
     <div class="container text-center">
       <a class="navbar-brand " href="#" style="font-family: 'Urbanist', sans-serif; font-size: 22pt; color: white; ">Lodilo</a>
       <p>&copy; 2023 Il mio sito - Tutti i diritti riservati</p>
     </div>
-      </footer>
     <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon="{&quot;rayId&quot;:&quot;7d83b30f990dba8f&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2023.4.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  
+  <script>
+  displaycart();
+  </script>
   </body>
   </html>
