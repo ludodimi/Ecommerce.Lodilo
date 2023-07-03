@@ -21,19 +21,19 @@
   const product = [
 				{
 				 id: 0,              
-				 image: 'foto-ecom/Vale-7.jpg',
-				 title: 'onda',
-				 price: 79
+				 image: 'foto-ecom/vale-prodotti.jpg',
+				 title: 'Completo Elettra',
+				 price: 59
 				},{
 				 id: 1,
-				 image: 'foto-ecom/prod verd.png',
-				 title: 'verd',
-				 price: 129
+				 image: 'foto-ecom/marti prpe.png',
+				 title: 'Leggins"Funny"',
+				 price: 49
 				},{
 				 id: 2,
-				 image: 'https://img.ltwebstatic.com/images3_pi/2023/02/23/167713576779c76bf8d5c01ad6795d63dea888f05a_thumbnail_900x.webp',
-				 title: 'vops',
-				 price: 109,
+				 image: 'foto-ecom/Marti-3.jpg',
+				 title: 'Completo "Hope"',
+				 price: 79,
 				}
 
 			  ];
@@ -73,11 +73,11 @@
 					{
 						var {image, title, price} = items;
 						mtotal=mtotal+price;
-						document.getElementById("miniTotal").innerHTML="€ "+mtotal+".00";
+						document.getElementById("miniTotal").innerHTML="€ "+mtotal+".99";
 						return(
 						`<div class='minicart-item'><img src="foto-ecom/vale-prodotti.jpg" class="rounded float-start" style="width: 50px; height:65px; margin-left: 5px;"/>
 						<div style="margin-left: 68px; max-width:90px;">${title}</div>
-						<div style="margin-left: 68px; font-size:smaller">€ ${price}.00</div>
+						<div style="margin-left: 68px; font-size:smaller">€ ${price}.99</div>
 						  <button class="btn btn-outline-dark btn-sm float-end" style="margin-top: -50px; margin-right: 5px; font-size: 9pt;" 
 							`+" onclick='delElement("+(m++) +")' > "+`
 							<i class="fa-solid fa-trash-can"></i>

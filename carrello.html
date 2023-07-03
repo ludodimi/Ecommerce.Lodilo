@@ -20,12 +20,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
-    font-size: 18px;
-   
   }
   body{
-    
     align-item: center;
     justify-content: center;
   }
@@ -168,22 +164,22 @@
     margin: 10px 10px;
   }
   .row-img{
-     width: 50px;
+    width: 50px;
     height: 50px;
-    border-radius: 50px;
-    border: 1px solid black;
-     display: flex;
+    display: flex;
     align-item: center;
     justify-content: center;
   }
   .rowimg{
     max-width: 50px;
     max-height: 50px;
-    border-radius: 50px;
   }
   .fa-trash: hover{
     cursor: pointer;
     color: gray;
+  }
+  #miniCartItem{
+    margin-left: 5px;
   }
   @media screen and (max-width: 576px){
     .container{
@@ -289,18 +285,18 @@
 			const product = [
 				{
 				 id: 0,              
-				 image: 'foto-ecom/Vale-7.jpg',
-				 title: 'onda',
+				 image: 'foto-ecom/vale-prodotti.jpg',
+				 title: 'Completo "Elettra"',
 				 price: 79
 				},{
 				 id: 1,
-				 image: 'foto-ecom/prod verd.png',
-				 title: 'verd',
+				 image: 'foto-ecom/marti prpe.png',
+				 title: 'Leggins "Funny"',
 				 price: 129
 				},{
 				 id: 2,
-				 image: 'https://img.ltwebstatic.com/images3_pi/2023/02/23/167713576779c76bf8d5c01ad6795d63dea888f05a_thumbnail_900x.webp',
-				 title: 'vops',
+				 image: 'foto-ecom/Marti-3.jpg',
+				 title: 'Completo "Hope"',
 				 price: 109,
 				}
 
@@ -338,14 +334,14 @@
 					{
 						var {image, title, price} = items;
 						total=total+price;
-						document.getElementById("total").innerHTML="€ "+total+".00";
+						document.getElementById("total").innerHTML="€ "+total+".99";
 						return(
 						`<div class='cart-item'>
 						<div class='row-img'>
 						<img class='rowimg' src='${image}'></img>
 						</div>
 						<p style='font-size:12px;'>${title}</p>
-						<h2 style='font-style:15px;'>€ ${price}.00</h2>`+"<i class='fa-solid fa-trash' onclick='delElement("+(j++) +")'></i>"+`</div>`
+						<h2 style='font-style:15px;'>€ ${price}.99</h2>`+"<i class='fa-solid fa-trash' onclick='delElement("+(j++) +")'></i>"+`</div>`
 						);
 					}).join('');
 						let m= 0; mtotal=0;
@@ -353,16 +349,16 @@
 					{
 						var {image, title, price} = items;
 						mtotal=mtotal+price;
-						document.getElementById("miniTotal").innerHTML="€ "+mtotal+".00";
+						document.getElementById("miniTotal").innerHTML="€ "+mtotal+".99";
 						return(
-						`<div class='minicart-item'><img src="foto-ecom/vale-prodotti.jpg" class="rounded float-start" style="width: 50px; height:65px; margin-left: 5px;"/>
+						`<div class='minicart-item'><img src='${image}' class="rounded float-start" style="width: 50px; height:65px; margin-left: 5px;"/>
 						<div style="margin-left: 68px; max-width:90px;">${title}</div>
-						<div style="margin-left: 68px; font-size:smaller">€ ${price}.00</div>
-						  <button class="btn btn-outline-dark btn-sm float-end" style="margin-top: -50px; margin-right: 5px; font-size: 9pt;" 
+						<div style="margin-left: 68px; font-size:smaller">€ ${price}.99</div>
+						  <button class="btn btn-outline-dark btn-sm float-end" style="margin-top: -30px; margin-right: 5px; font-size: 9pt;" 
 							`+" onclick='delElement("+(m++) +")' > "+`
 							<i class="fa-solid fa-trash-can"></i>
 						  </button>
-							<hr class="dropdown-divider"></div>`
+							<hr class="dropdown-divider" style="margin-top: 30px;"></div>`
 						);
 					}).join('');
 				}

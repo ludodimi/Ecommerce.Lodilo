@@ -298,6 +298,9 @@
   .form-v7-content .form-detail .register {
       margin-bottom: 80px
   }
+  #miniCartItem{
+    margin-left: 5px;
+  }
 
 @media screen and (max-width: 575px) {
   .form-v7-content .form-detail {
