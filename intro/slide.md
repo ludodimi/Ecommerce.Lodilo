@@ -10,7 +10,8 @@ footer: https://github.com/ludodimi/EcommerceLodilo
 Leggins sportivi e altro
 
 
-**Ludovica Dimitri** n° _matricola:832_
+**Ludovica Dimitri** 
+n° _matricola:832_
 Immagine d'impresa
 ACME - 3°anno A.A. 2022-2023
 **Materia**:Web Design 2
@@ -29,14 +30,14 @@ img[alt~='center'] {
 
 ## Corso di Web Design
 
-Presentazione progetto del corso di Web design del terzo anno accademico
-ACME-Novara
+![ width:570px](Logol.png)
 
-ludovica.dimitri08@gmail.com – 
+Nel corso di quest'anno abbiamo creato un sito per un ipotetico e-commerce. Io ho scelto di progettare un e-commerce di leggins sportivi, utilizzando le **competenze** acquisite in precedenza su **HTML, CSS e Javascript**.
+
 il repository per il sito è il seguente: <https://ecommercelodilo.netlify.app/>
 
 ---
 
-## Nuova Slide
-
-test
+# Creazione Slide
+![bg right:33% width:400px](marp.png)
+Marp conosciuto anche come _Markdown Presentation Ecosystem_ permette un'esperienza intuitiva e veloce per creare delle semplici slide. Quello che noi dobbiamo fare è semplicemente scrivere un documento in **markdown**.
