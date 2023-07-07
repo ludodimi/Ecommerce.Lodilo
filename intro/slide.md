@@ -9,10 +9,10 @@ footer: https://github.com/ludodimi/EcommerceLodilo
 # Progetto e-commerce "Lodilo" 
 Leggins sportivi e altro
 
+
 **Ludovica Dimitri** n° _matricola:832_
 Immagine d'impresa
-ACME - 3°anno
-A.A. 2022-2023
+ACME - 3°anno A.A. 2022-2023
 **Materia**:Web Design 2
 **Docente**:Matteo Baccan
 
