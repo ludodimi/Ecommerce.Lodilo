@@ -1,5 +1,6 @@
 ---
-backgroundImage: url ![bg right:5% bottom: 20%]('Sfondo.slide.png')
+backgroundImage: url('Sfondo.slide.png')
+![bg right:5% bottom: 20%]('Sfondo.slide.png')
 paginate: true
 marp: true
 color: white
