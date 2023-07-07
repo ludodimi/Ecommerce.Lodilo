@@ -30,7 +30,7 @@ img[alt~='center'] {
 
 ## Corso di Web Design
 
-![](lodilo.png)
+![background: none](Logol.png)
 
 Nel corso di quest'anno abbiamo creato un sito per un ipotetico e-commerce. Io ho scelto di progettare un e-commerce di leggins sportivi, utilizzando le **competenze** acquisite in precedenza su **HTML, CSS e Javascript**.
 
