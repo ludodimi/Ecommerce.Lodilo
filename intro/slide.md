@@ -3,6 +3,7 @@ backgroundImage: url('Sfondo.slide.png')
 paginate: true
 marp: true
 color: white
+style: {margin-top: -10px; margin-left: -5px;}
 footer: https://github.com/ludodimi/EcommerceLodilo
 ---
 
