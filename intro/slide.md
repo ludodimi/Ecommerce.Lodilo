@@ -1,9 +1,9 @@
 ---
-theme: default
-_class: invert
+backgroundImage: url('Sfondo.slide.png')
 paginate: true
+marp: true
+
 <<<<<<< HEAD
-background-color: #3D3D3D
 color: white
 =======
 >>>>>>> e1f6b26 (ok)
