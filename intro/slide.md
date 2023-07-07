@@ -1,14 +1,9 @@
 ---
-backgroundImage: url('Sfondo.slide.png')
+backgroundImage: url('intro/Sfondo.slide.png')
 paginate: true
 marp: true
-
-<<<<<<< HEAD
 color: white
-=======
->>>>>>> e1f6b26 (ok)
-marp: true
-footer: https://github.com/matteobaccan/CorsoWebDesign
+footer: https://github.com/ludodimi/EcommerceLodilo
 ---
 
 # Corso WebDesign
