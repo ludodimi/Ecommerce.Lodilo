@@ -56,6 +56,33 @@ Bootstrap è un framework di sviluppo web gratuito e open source. È progettato 
 
 ---
 
-# Ai e Chat GPT
+# AI e Chat GPT
 ![bg right:33% width:400px](logoChatGPT.jpg)
 Chat GPT è un software di intelligenza artificiale che si concentra sull'interazione tra computer e linguaggio umano e nel mio sito l'ho utilizzato solamente in 2 casi per vedere come funzionava: per il **Welcome Popup** e per il **cookie della privacy**.
+
+---
+
+# Font Awesome
+![bg right:33% width:400px](Fontawesomelogo.png)
+Per le icone presenti nel sito mi sono affidata ad un tool esterno, quale Font-Awesome che contiene milioni di icone utilizzabili anche gratuitamente.
+
+---
+
+# Il sito "Lodilo"
+## Home Page
+![bg right:33% width:400px](Home.png)
+Il sito è stato pensato a tema Dark.
+
+Nella Homepage troviamo diverse sezioni: 
+**-Navbar**
+**-Slider**
+**-Card**
+**-Form per il Login**
+**-Footer**
+**-Cookie e Welcome Popup**
+
+---
+
+# Navbar
+La Navbar utilizzata è uno dei modelli di Bootstrap, è costituita da diversi Nav-items tra cui: Navbar-Brand(Logo), nav-item, dropdown menu, nav-link, carrello e il button per cercare. 
+![bg right:0% left:0% bottom:10%  width:400px](Navbar.png)
