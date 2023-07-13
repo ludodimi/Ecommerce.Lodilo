@@ -30,7 +30,7 @@ img[alt~='center'] {
 
 ## Corso di Web Design
 
-![](Lodilo1.png)
+### Lodilo
 
 Nel corso di quest'anno abbiamo creato un sito per un ipotetico e-commerce. Io ho scelto di progettare un e-commerce di leggins sportivi, utilizzando le **competenze** acquisite in precedenza su **HTML, CSS e Javascript**.
 
@@ -39,5 +39,11 @@ il repository per il sito è il seguente: <https://ecommercelodilo.netlify.app/>
 ---
 
 # Creazione Slide
-![bg right:33% width:400px](marp.png)
+![bg right:33% width:400px](og-image.png)
 Marp conosciuto anche come _Markdown Presentation Ecosystem_ permette un'esperienza intuitiva e veloce per creare delle semplici slide. Quello che noi dobbiamo fare è semplicemente scrivere un documento in **markdown**.
+
+---
+
+# Strumento per la programmazione
+![bg right:33% width:400px](Codespacelogo.png)
+Per programmare ed editare le varie parti del mio sito mi sono affidata a **Codespace** lo spazio dedicato alla gestione dei codici e delle varie pagine del sito in HTML, CSS e Javascript. Il tutto all'interno di **Github**, il servizio di hosting per i vari commit e repository dei propri progetti.
