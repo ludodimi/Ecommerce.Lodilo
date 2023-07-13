@@ -84,6 +84,6 @@ Nella Homepage troviamo diverse sezioni:
 ---
 
 # Navbar
-![bg bottom width:400px](Navbar.png)
-La Navbar utilizzata è uno dei modelli di Bootstrap, è costituita da diversi Nav-items tra cui: Navbar-Brand(Logo), nav-item, dropdown menu, nav-link, carrello e il button per cercare. 
 
+La Navbar utilizzata è uno dei modelli di Bootstrap, è costituita da diversi Nav-items tra cui: Navbar-Brand(Logo), nav-item, dropdown menu, nav-link, carrello e il button per cercare. 
+![bg bottom width:700px](Navbar.png)
