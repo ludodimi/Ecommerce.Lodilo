@@ -30,7 +30,7 @@ img[alt~='center'] {
 
 ## Corso di Web Design
 
-### Lodilo
+## Lodilo
 
 Nel corso di quest'anno abbiamo creato un sito per un ipotetico e-commerce. Io ho scelto di progettare un e-commerce di leggins sportivi, utilizzando le **competenze** acquisite in precedenza su **HTML, CSS e Javascript**.
 
@@ -47,3 +47,15 @@ Marp conosciuto anche come _Markdown Presentation Ecosystem_ permette un'esperie
 # Strumento per la programmazione
 ![bg right:33% width:400px](Codespacelogo.png)
 Per programmare ed editare le varie parti del mio sito mi sono affidata a **Codespace** lo spazio dedicato alla gestione dei codici e delle varie pagine del sito in HTML, CSS e Javascript. Il tutto all'interno di **Github**, il servizio di hosting per i vari commit e repository dei propri progetti.
+
+---
+
+# Bootstrap
+![bg right:33% width:400px](Bootstraplogo.jpg)
+Bootstrap è un framework di sviluppo web gratuito e open source. È progettato per facilitare il processo di sviluppo web di siti web responsive e mobile-first fornendo una raccolta di sintassi per i modelli di progettazione. Durante la progettazione è stato utilizzato per ricavare gli elementi fondamentali, come **Navbar**, **Footer**, **Card**, **Carousel** e per gestire alcuni spazi con la classificazione dello spacing dei margini.
+
+---
+
+# Ai e Chat GPT
+![bg right:33% width:400px](logoChatGPT.jpg)
+Chat GPT è un software di intelligenza artificiale che si concentra sull'interazione tra computer e linguaggio umano e nel mio sito l'ho utilizzato solamente in 2 casi per vedere come funzionava: per il **Welcome Popup** e per il **cookie della privacy**.
