@@ -82,6 +82,8 @@ Nella Homepage troviamo diverse sezioni:
 **-Cookie e Welcome Popup**
 
 ---
-![bg top width:1000px](Navbar.png)
+
+
 # Navbar
 La Navbar utilizzata è uno dei modelli di Bootstrap, è costituita da diversi Nav-items tra cui: Navbar-Brand(Logo), nav-item, dropdown menu, nav-link, carrello e il button per cercare. 
+![gatto width:1000px](Navbar.png)
