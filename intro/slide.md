@@ -90,6 +90,11 @@ La Navbar utilizzata è uno dei modelli di Bootstrap, è costituita da diversi N
 
 ---
 
+
 # Slider
 Lo slider è stato creato con il tag carousel di Bootstrap e contiene tre diverse immagini con descrizione che possono essere cambiate al click della freccia > avanti, < indietro
-![bg right width: 100%](slider2.png) ![width: 100px](slider.png)
+![bg right width: 100%](slider.png)
+
+---
+
+![width: 200px](slider2.png) 
