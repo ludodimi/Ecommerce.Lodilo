@@ -70,7 +70,7 @@ Per le icone presenti nel sito mi sono affidata ad un tool esterno, quale Font-A
 
 # Il sito "Lodilo"
 ## Home Page
-![bg right:33% width:400px](Home.png)
+![bg right:33% width:600px](Home.png)
 Il sito è stato pensato a tema Dark.
 
 Nella Homepage troviamo diverse sezioni: 
@@ -86,4 +86,10 @@ Nella Homepage troviamo diverse sezioni:
 
 # Navbar
 La Navbar utilizzata è uno dei modelli di Bootstrap, è costituita da diversi Nav-items tra cui: Navbar-Brand(Logo), nav-item, dropdown menu, nav-link, carrello e il button per cercare. 
-![gatto width:1000px](Navbar.png)
+![center navbar width:1000px](Navbar.png)
+
+---
+
+# Slider
+Lo slider è stato creato con il tag carousel di Bootstrap e contiene tre diverse immagini con descrizione che possono essere cambiate al click della freccia > avanti, < indietro
+![bg right width: 100%](slider2.png) ![width: 100px](slider.png)
