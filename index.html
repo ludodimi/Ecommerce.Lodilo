@@ -99,9 +99,9 @@
 				}
 			  }
         const pattern = /(?:.*)(@[0-9]{0,10}x)$/
-        const files = fs.readdirSync('/path/to/my/images')
+        const files = fs.readdirSync('/foto-ecom')
            .filter((file) => file !== '.DS_Store')
-           .map((file) => `/path/to/my/images/${file}`)
+           .map((file) => `/foto-ecom${file}`)
 
         renameImagesToSize(files, pattern)
   </script>
