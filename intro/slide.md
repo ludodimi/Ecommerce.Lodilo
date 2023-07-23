@@ -98,3 +98,7 @@ Lo slider è stato creato con il tag carousel di Bootstrap e contiene tre divers
 ---
 
 ![width: 200px](slider2.png) 
+
+---
+# Card
+![width: 100px](card.png)
