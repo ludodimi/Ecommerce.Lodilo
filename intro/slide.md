@@ -150,3 +150,84 @@ Questo codice rappresenta la struttura di un footer (piede di pagina) per una pa
 3. Sezione "Links": Questa sezione contiene collegamenti ad altre pagine del sito.
 4. Sezione "Contatti": Questa sezione contiene informazioni di contatto per il sito.
 5. Footer "Copyright": contiene un testo che indica il copyright dell'anno 2023 e un link (`<a>`) che porta al sito (`href="https://ecommercelodilo.netlify.app/"`). Il testo è impostato in grassetto (`fw-bold`) per evidenziarlo.
+
+---
+# Welcome Popup
+Il popup di benvenuto offre uno sconto del 10% sul prossimo acquisto. Include un messaggio di benvenuto, le istruzioni per utilizzare il codice sconto e un'icona di chiusura per chiudere il popup. Il popup è gestito tramite il codice JavaScript, che mostra e nasconde il popup a seconda dell'interazione dell'utente con l'icona di chiusura o tramite altre azioni specificate nell'applicazione web.
+
+---
+
+![bg width: 100%](popup.png)
+![bg width: 100%](scriptpop.png)
+
+---
+#Cookie
+
+<script>
+  function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      var expires = "expires=" + d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      var cookieBanner = document.getElementById('cookie-banner');
+      cookieBanner.style.display = 'none';
+  }
+
+  function acceptCookies() {
+      setCookie('cookieAccepted', 'true', 365);
+  }
+</script>
+
+![]()
+![top: 30% width: 100%](cookies.png)
+Questo codice è uno script JavaScript per gestire l'accettazione dei cookie da parte dell'utente utilizzando i cookie del browser.
+
+---
+
+Il codice gestisce il banner dei cookie sulla pagina web. Se l'utente non ha ancora accettato i cookie, il banner verrà mostrato. Se l'utente accetta i cookie, il banner verrà nascosto e verrà impostato un cookie chiamato 'cookieAccepted' per tener traccia dell'accettazione. Questo approccio garantisce che il banner non venga mostrato agli utenti che hanno già accettato i cookie e vogliono nasconderlo in futuro.
+
+---
+
+# "Chi siamo"
+
+La pagina Chi siamo è suddivisa in 3 sezioni: 
+- Sezione "Chi siamo": Questa sezione descrive l'identità del sito "Lodilo.com" e cosa offrono. Contiene una descrizione testuale, un'immagine e un'icona.
+
+- Sezione "Cosa facciamo": In questa sezione, il sito spiega cosa fa e come opera. Anche questa sezione contiene una descrizione testuale, un'immagine e un'icona.
+
+- Sezione "Servizio clienti": Questa sezione mette in evidenza l'attenzione del sito verso il servizio clienti. Include una descrizione testuale, un'immagine e un'icona.
+
+Sono stati utilizzati stili inline (come style="...") per definire alcune proprietà CSS specifiche per i contenuti, come il colore del testo, l'ombreggiatura del testo (text-shadow), la dimensione dell'icona (font-size), ecc.
+
+---
+![bg width: 100%](about.png)
+![bg width: 100%](about2.png)
+![bg width: 100%](about3.png)
+
+---
+
+# Pagine Prodotto
+Il codice inserito rappresenta una sezione della pagina web con informazioni riguardanti un prodotto specifico chiamato "Completo Elettra" con una galleria di immagini, informazioni sul prodotto e pulsanti per selezionare la quantità, la taglia e il colore del prodotto, oltre a un pulsante per aggiungerlo al carrello. 
+Lo style è descritto in un foglio esterno.
+![bg right width: 100%](product.png)
+
+---
+
+## Elementi particolari:
+- <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">: Questo div contiene un carosello (swiper) di immagini associate al prodotto. È utilizzato per visualizzare più immagini del prodotto, permettendo all'utente di scorrerle.
+- <input type="number" class="form-control" id="quantita" min="1" value="1">: Questo è un campo di input numerico che permette all'utente di specificare la quantità desiderata del prodotto.
+- <a class="btn btn-primary" id="car" style="color:white;" href="carrello.html" onclick="addtocart(0)">Aggiungi al carrello</a>: Questo è un pulsante "Aggiungi al carrello". Quando viene cliccato, viene chiamata la funzione JavaScript addtocart(0) (che sembra non essere definita nel codice fornito) e reindirizza l'utente alla pagina "carrello.html".
+
+---
+
+# Contatti
+![width: 100%](contatti.png)
+
+---
+Questo pagina rappresenta un modulo di contatto e informazioni di contatto per consentire agli utenti di contattare l'azienda. Il modulo richiede nome, email e messaggio, e un pulsante consente di inviare il messaggio. Le informazioni di contatto dell'azienda sono fornite sopra il modulo.
+
+- Gli `<li>` elementi nell'elenco contengono le informazioni di contatto, tra cui l'indirizzo, il numero di telefono e il sito web dell'azienda.
+
+- Il `<form>` contiene un modulo di contatto con campi per nome, email e messaggio.
+
+- Il modulo di contatto ha un pulsante "Send Message" per inviare il messaggio, utilizzando una classe "btn btn-outline-light" per lo stile del pulsante.
