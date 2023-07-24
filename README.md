@@ -11,6 +11,8 @@ Il repository è pubblicato a questo indirizzo: https://ecommercelodilo.netlify.
 
 # Netlify Status
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6b66b880-c822-486e-961f-09a6c3d91222/deploy-status)](https://app.netlify.com/sites/ecommercelodilo/deploys)
+
 # Strumento per la programmazione:
 - Codespace
 
