@@ -231,3 +231,57 @@ Questo pagina rappresenta un modulo di contatto e informazioni di contatto per c
 - Il `<form>` contiene un modulo di contatto con campi per nome, email e messaggio.
 
 - Il modulo di contatto ha un pulsante "Send Message" per inviare il messaggio, utilizzando una classe "btn btn-outline-light" per lo stile del pulsante.
+
+---
+
+# Carrello e Mini carrello
+La Pagina rappresenta una pagina web con un layout responsivo che include un carrello della spesa. Inoltre, è presente un elenco di prodotti con un'opzione per aggiungere i prodotti al carrello e visualizzarli nel carrello.
+Lo stile CSS è interno; c'è il carrello della spesa: Un'icona di carrello con un contatore per il numero di articoli presenti nel carrello. È possibile fare clic sull'icona per visualizzare un elenco di prodotti nel carrello, con la possibilità di rimuoverli.
+Per l'elenco dei prodotti viene fornita un'array di oggetti "product" che rappresentano i prodotti disponibili. Per ogni prodotto, è possibile visualizzare un'immagine, il titolo e il prezzo. È possibile aggiungere i prodotti al carrello facendo clic sull'icona del carrello accanto a ciascun prodotto.
+Script JavaScript: Viene fornito un codice JavaScript per gestire l'aggiunta e la rimozione dei prodotti dal carrello, nonché per visualizzare l'elenco dei prodotti nel carrello e calcolare il totale dei prezzi.
+
+---
+
+![bg width: 100%](carrello.png)
+![bg width: 95%](minicarr.png)
+
+---
+# Script 
+Il codice JavaScript utilizzato gestisce le funzionalità del carrello della spesa.
+1. **Dati dei prodotti**: Viene definito un array chiamato "product" che contiene oggetti che rappresentano i prodotti disponibili nel negozio. Ogni oggetto ha un id univoco, un'immagine, un titolo e un prezzo.
+
+2. **Variabile "cart"**: Viene creata una variabile "cart" in cui vengono memorizzati i prodotti aggiunti al carrello. Se non ci sono elementi nel carrello (nel caso in cui sia la prima visita dell'utente o il carrello sia stato svuotato), la variabile "cart" viene inizializzata come un array vuoto.
+
+---
+
+3. **Funzione "addtocart"**: Questa funzione viene chiamata quando l'utente aggiunge un prodotto al carrello. Prende come argomento l'indice dell'oggetto selezionato dal menu dei prodotti. L'oggetto viene copiato in "cart" utilizzando l'operatore spread (...) e viene aggiunto all'array "cart". Il carrello aggiornato viene quindi salvato nel local storage e la funzione "displaycart" viene chiamata per visualizzare gli elementi nel carrello.
+
+4. **Funzione "delElement"**: Questa funzione viene chiamata quando l'utente rimuove un prodotto dal carrello. Prende come argomento l'indice dell'oggetto da rimuovere dall'array "cart". L'oggetto corrispondente viene rimosso dall'array "cart", e il carrello aggiornato viene salvato nel local storage. Infine, la funzione "displaycart" viene chiamata per aggiornare la visualizzazione del carrello.
+
+---
+
+5. **Funzione "displaycart"**: Questa funzione viene chiamata per visualizzare gli elementi presenti nel carrello. Conta il numero di prodotti nel carrello e aggiorna il contatore visualizzato nell'icona del carrello. Se il carrello è vuoto, vengono visualizzati messaggi appropriati; altrimenti, vengono elencati tutti i prodotti con le rispettive immagini, titoli e prezzi. Viene calcolato il totale dei prezzi dei prodotti nel carrello e visualizzato in una sezione dedicata.
+
+Inoltre, viene chiamata la funzione "displaycart" al momento del caricamento della pagina per visualizzare eventuali prodotti già presenti nel carrello dal precedente accesso dell'utente.
+
+---
+# Responsive
+https://ui.dev/amiresponsive?url=https://ecommercelodilo.netlify.app/
+![width: 90%](responsive.png)
+
+---
+# Ottimizzazione
+
+![width: 100%](ott2.png) 
+
+---
+
+# Ottimizzazione Mobile
+
+![width: 95%](ott1.png)
+
+---
+
+# Grazie per l'attenzione!
+
+Ludovica Dimitri
