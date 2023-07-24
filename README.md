@@ -20,7 +20,6 @@ Per questo progetto ho usato il code editor Codespace, modificando il mio reposi
 
 # AI come supporto
 Chat GPT
-GPT
 
 # Come è stata usata
 Ho usato questa IA per creare alcune parti del sito e dei testi presenti in esso.
